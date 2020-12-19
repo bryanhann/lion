@@ -1,1 +1,1 @@
-print( 'I am king midas' )
+print( 'I am king midas. Golden!' )
