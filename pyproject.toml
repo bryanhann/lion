@@ -1,13 +1,30 @@
 [tool.poetry]
-name = "king"
-version = "0.1.3"
-description = ""
-authors = ["Bryan Hann <nobody@nowhere>"]
+    name = "king"
+    version = "0.1.8"
+    description = "A short description."
+    authors = ["Bryan Hann <largo@pobox.com>"]
+    maintainers = ["Bryan Hann <largo@pobox.com>"]
+    readme = "README.rst"
+    license = "MIT"
+    homepage      = "https://nowhere.com/foo/bar/homepage"
+    repository    = "https://nowhere.com/foo/bar/repository"
+    documentation = "https://nowhere.com/foo/bar/documentation"
+    keywords = [ 'awesome', 'terrible', 'pumpkin', 'zombie', 'woof' ]
+    classifiers = [
+        "Topic :: Software Development :: Build Tools",
+        "Topic :: Software Development :: Libraries :: Python Modules"
+    ]
+    packages = [
+        { include = "king", format = "sdist" },
+    ]
+
+[tool.poetry.dependencies]
+    pytest = "^6.2.1"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+    requires = ["poetry-core>=1.0.0"]
+    build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-touch = 'king.midas:touch'
-midas = 'king.midas:mtouch'
+    touch = 'king.midas:touch'
+    midas = 'king.midas:mtouch'
