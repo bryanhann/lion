@@ -1,14 +1,43 @@
 [tool.poetry]
-name = "king"
-version = "0.1.3"
-description = ""
-authors = ["Bryan Hann <nobody@nowhere>"]
+name = "king"                                   #required
+version = "0.1.6"                               #required
+description = ""                                #required
+authors = ["Bryan Hann <nobody@nowhere>"]       #required
+
+#   maintainers = ["Bryan Hann <nobody@nowhere>"]
+#   license = "Proprietary"
+#   readme = "README.rst"
+#   homepage =
+#   repository =
+#   documentation =
+#   keywords =
+#   classifiers =
+#
+#   packages = [
+#       { include = "my_package" },
+#       { include = "extra_package/**/*.py" },
+#       { include = "my_package2", from = "lib" },
+#       { include = "my_other_package", format = "sdist" },
+#   ]
+#
+#   include = ["CHANGELOG.md"]
+#   exclude = ["my_package/excluded.py"]
+
+
+
 
 [tool.poetry.dependencies]
-python = ">=2.7"
+python = ">=3.6"                                #required
+# requests = { git = "https://github.com/kennethreitz/requests.git", branch = "next" }
+# flask = { git = "https://github.com/pallets/flask.git", rev = "38eb5d3b" }
+# numpy = { git = "https://github.com/numpy/numpy.git", tag = "v0.13.2" }
+
 
 [tool.poetry.dev-dependencies]
-pytest = "^4.6"
+pytest = ">=6.2"
+
+[tool.poetry.scripts]
+midas = 'king.midas:touch'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
